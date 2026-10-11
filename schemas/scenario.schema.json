@@ -1,0 +1,503 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "synthetic": {
+      "const": true
+    },
+    "organization_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "authorized_entities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "coverage_entities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "coverage_through": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence_feed_complete": {
+          "type": "boolean"
+        },
+        "expected_counterparts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "original_entry_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "entity_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "due_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 1
+              },
+              "amount_minor": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "relationship_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "relationship_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "recorded_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "available_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            },
+            "required": [
+              "original_entry_id",
+              "entity_id",
+              "due_at",
+              "currency",
+              "amount_minor",
+              "relationship_id",
+              "relationship_version",
+              "recorded_at",
+              "available_at"
+            ]
+          }
+        }
+      },
+      "required": [
+        "authorized_entities",
+        "coverage_entities",
+        "coverage_through",
+        "evidence_feed_complete",
+        "expected_counterparts"
+      ]
+    },
+    "accounts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "account_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "classification": {
+            "enum": [
+              "asset",
+              "liability",
+              "equity",
+              "revenue",
+              "expense"
+            ]
+          },
+          "mapping_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "available_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "account_id",
+          "classification",
+          "mapping_version",
+          "entity_ids",
+          "recorded_at",
+          "available_at"
+        ]
+      }
+    },
+    "periods": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "period_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "starts_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "ends_on": {
+            "type": "string",
+            "format": "date"
+          },
+          "closed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "close_available_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "calendar_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "available_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "period_id",
+          "entity_id",
+          "starts_on",
+          "ends_on",
+          "closed_at",
+          "close_available_at",
+          "calendar_version",
+          "recorded_at",
+          "available_at"
+        ]
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "entry_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "organization_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effective_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "available_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "period_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$"
+          },
+          "currency_exponent": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 4
+          },
+          "entry_kind": {
+            "enum": [
+              "journal",
+              "consolidation_adjustment"
+            ]
+          },
+          "manual": {
+            "type": "boolean"
+          },
+          "preparer_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "business_purpose_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reversal_of": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "counterparty_entity_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "line_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "account_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "currency": {
+                  "type": "string",
+                  "pattern": "^[A-Z]{3}$"
+                },
+                "debit_minor": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9000000000000
+                },
+                "credit_minor": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9000000000000
+                }
+              },
+              "required": [
+                "line_id",
+                "account_id",
+                "currency",
+                "debit_minor",
+                "credit_minor"
+              ]
+            },
+            "minItems": 2
+          }
+        },
+        "required": [
+          "entry_id",
+          "organization_id",
+          "entity_id",
+          "source_event_id",
+          "effective_date",
+          "recorded_at",
+          "available_at",
+          "period_id",
+          "currency",
+          "currency_exponent",
+          "entry_kind",
+          "manual",
+          "preparer_id",
+          "business_purpose_ref",
+          "reversal_of",
+          "counterparty_entity_id",
+          "evidence_ids",
+          "lines"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "organization_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "support",
+              "recurring_reversal_schedule",
+              "late_post_permission",
+              "business_explanation"
+            ]
+          },
+          "available_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "recorded_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "entry_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_id",
+          "organization_id",
+          "entity_id",
+          "kind",
+          "available_at",
+          "recorded_at",
+          "entry_ids",
+          "text"
+        ]
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policy_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "period_end_days": {
+          "const": 3
+        },
+        "group_window_days": {
+          "const": 7
+        },
+        "group_min_entries": {
+          "const": 3
+        },
+        "group_review_threshold_minor": {
+          "const": 1000000
+        },
+        "required_support_for_manual_revenue": {
+          "const": true
+        },
+        "recorded_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "available_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "policy_version",
+        "period_end_days",
+        "group_window_days",
+        "group_min_entries",
+        "group_review_threshold_minor",
+        "required_support_for_manual_revenue",
+        "recorded_at",
+        "available_at"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "synthetic",
+    "organization_id",
+    "engagement_id",
+    "observed_as_of",
+    "scope",
+    "accounts",
+    "periods",
+    "entries",
+    "evidence",
+    "policy"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/ledger-integrity/scenario.schema.json",
+  "title": "Ledger integrity original development scenario"
+}

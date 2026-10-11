@@ -1,0 +1,119 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "specification_only": {
+      "const": true
+    },
+    "runtime_implemented": {
+      "const": false
+    },
+    "expected_admission": {
+      "enum": [
+        "accepted",
+        "quarantined",
+        "rejected"
+      ]
+    },
+    "expected_label": {
+      "enum": [
+        "routine",
+        "review_relevant",
+        "undetermined",
+        "input_invalid"
+      ]
+    },
+    "required_reason_codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "period_end_support_gap",
+          "unexplained_reversal",
+          "late_post_permission_gap",
+          "related_counterpart_gap",
+          "grouped_adjustment_review",
+          "context_missing",
+          "data_quality",
+          "cross_organization_reference",
+          "duplicate_conflict",
+          "currency_mismatch",
+          "unbalanced_entry"
+        ]
+      }
+    },
+    "forbidden_reason_codes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "period_end_support_gap",
+          "unexplained_reversal",
+          "late_post_permission_gap",
+          "related_counterpart_gap",
+          "grouped_adjustment_review",
+          "context_missing",
+          "data_quality",
+          "cross_organization_reference",
+          "duplicate_conflict",
+          "currency_mismatch",
+          "unbalanced_entry"
+        ]
+      }
+    },
+    "visible_entry_ids_after_dedup": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "withheld_entry_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "expected_gross_debits_minor_by_currency": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "must_not_claim": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "human_review_note": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "specification_only",
+    "runtime_implemented",
+    "expected_admission",
+    "expected_label",
+    "required_reason_codes",
+    "forbidden_reason_codes",
+    "visible_entry_ids_after_dedup",
+    "withheld_entry_ids",
+    "expected_gross_debits_minor_by_currency",
+    "must_not_claim",
+    "human_review_note"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Expected behavior specification, not measured output"
+}

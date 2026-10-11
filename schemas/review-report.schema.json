@@ -1,0 +1,203 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "organization_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "strategy": {
+      "enum": [
+        "rules",
+        "amount",
+        "random",
+        "candidate",
+        "hybrid"
+      ]
+    },
+    "policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entry_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "state": {
+            "enum": [
+              "needs_review",
+              "context_missing",
+              "data_quality",
+              "reviewed_explained",
+              "reviewed_follow_up",
+              "superseded"
+            ]
+          },
+          "rank": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "score": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "score_meaning": {
+            "enum": [
+              "relative_priority_not_probability",
+              "not_scored"
+            ]
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "rule_version": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "entry_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "operand_description": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "missing_context": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "review_question": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "code",
+                "rule_version",
+                "entry_ids",
+                "evidence_ids",
+                "operand_description",
+                "missing_context",
+                "review_question"
+              ]
+            }
+          }
+        },
+        "required": [
+          "case_id",
+          "entry_ids",
+          "state",
+          "rank",
+          "score",
+          "score_meaning",
+          "reasons"
+        ]
+      }
+    },
+    "population": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "submitted_cases": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "scored_cases": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "context_cases": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "quarantined_cases": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed_cases": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "submitted_cases",
+        "scored_cases",
+        "context_cases",
+        "quarantined_cases",
+        "failed_cases"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "run_id",
+    "organization_id",
+    "engagement_id",
+    "observed_as_of",
+    "strategy",
+    "policy_version",
+    "input_manifest_sha256",
+    "cases",
+    "population"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Future review report output contract"
+}

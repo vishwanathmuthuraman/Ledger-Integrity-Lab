@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S02",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "accepted",
+  "expected_label": "routine",
+  "required_reason_codes": [],
+  "forbidden_reason_codes": [
+    "unexplained_reversal"
+  ],
+  "visible_entry_ids_after_dedup": [
+    "JE-001",
+    "JE-002"
+  ],
+  "withheld_entry_ids": [],
+  "expected_gross_debits_minor_by_currency": {
+    "USD": 500000
+  },
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "A scheduled recurring accrual reversal is a deliberate hard negative."
+}

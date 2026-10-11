@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Private outcome label contract",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "label_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "label_type": {
+      "enum": [
+        "injected_review_issue",
+        "expert_review_relevance",
+        "confirmed_finding",
+        "unresolved"
+      ]
+    },
+    "label_value": {
+      "enum": [
+        "review_relevant",
+        "routine",
+        "undetermined"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "available_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "adjudicated_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "author_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "case_id",
+    "label_version",
+    "label_type",
+    "label_value",
+    "created_at",
+    "available_at",
+    "adjudicated_at",
+    "author_role",
+    "evidence_ids",
+    "rationale"
+  ]
+}

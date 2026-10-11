@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S10",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "accepted",
+  "expected_label": "review_relevant",
+  "required_reason_codes": [
+    "grouped_adjustment_review"
+  ],
+  "forbidden_reason_codes": [],
+  "visible_entry_ids_after_dedup": [
+    "JE-001",
+    "JE-002",
+    "JE-003"
+  ],
+  "withheld_entry_ids": [],
+  "expected_gross_debits_minor_by_currency": {
+    "USD": 1200000
+  },
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "Three explicitly linked manual adjustments total 1,200,000 minor units; one case requests business-purpose review."
+}

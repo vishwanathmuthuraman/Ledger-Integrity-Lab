@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S16",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "accepted",
+  "expected_label": "review_relevant",
+  "required_reason_codes": [
+    "period_end_support_gap"
+  ],
+  "forbidden_reason_codes": [],
+  "visible_entry_ids_after_dedup": [
+    "JE-001"
+  ],
+  "withheld_entry_ids": [],
+  "expected_gross_debits_minor_by_currency": {
+    "USD": 250000
+  },
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "Future support is unavailable; embedded text is inert data and cannot certify anything."
+}

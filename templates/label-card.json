@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "status": "template_only",
+  "case_id": null,
+  "label_type": null,
+  "label_value": null,
+  "label_author_role": null,
+  "created_at": null,
+  "evidence_ids": [],
+  "rationale": null,
+  "independent_review": null,
+  "adjudication_status": "not_started",
+  "revision": 1,
+  "available_at": null
+}

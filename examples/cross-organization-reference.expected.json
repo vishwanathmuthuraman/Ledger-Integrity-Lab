@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S15",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "rejected",
+  "expected_label": "input_invalid",
+  "required_reason_codes": [
+    "cross_organization_reference"
+  ],
+  "forbidden_reason_codes": [],
+  "visible_entry_ids_after_dedup": [],
+  "withheld_entry_ids": [],
+  "expected_gross_debits_minor_by_currency": {},
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "Check the specified evidence and preserve uncertainty; no intent finding is specified."
+}

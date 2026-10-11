@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S09",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "accepted",
+  "expected_label": "undetermined",
+  "required_reason_codes": [
+    "context_missing"
+  ],
+  "forbidden_reason_codes": [
+    "related_counterpart_gap"
+  ],
+  "visible_entry_ids_after_dedup": [
+    "JE-001"
+  ],
+  "withheld_entry_ids": [],
+  "expected_gross_debits_minor_by_currency": {
+    "USD": 250000
+  },
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "Missing subsidiary export is missing context, not proof that a counterpart does not exist."
+}

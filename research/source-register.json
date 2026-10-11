@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "checked_on": "2026-10-11",
+  "sources": [
+    {
+      "id": "S01",
+      "publisher": "PCAOB",
+      "title": "AS 2401: Consideration of Fraud in a Financial Statement Audit",
+      "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2401",
+      "publication_date_note": "Current standard page checked 2026-10-11",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "Paragraphs .05, .11, .57-.62 distinguish potential concerns from legal findings and address journal entries, adjustments and management override.",
+      "limitations": "Supports journal-review scope and cautious language; does not certify this software or establish universal rules."
+    },
+    {
+      "id": "S02",
+      "publisher": "IAASB",
+      "title": "ISA 240 (Revised)",
+      "url": "https://www.iaasb.org/publications/isa-240-revised-auditor-s-responsibilities-relating-fraud-audit-financial-statements",
+      "publication_date_note": "2025-07-08",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The revised standard strengthens fraud-related auditor responsibilities and applies to financial statement periods beginning on or after 2026-12-15.",
+      "limitations": "Verify local adoption and applicable period with a qualified reviewer; the blueprint is not a compliance opinion."
+    },
+    {
+      "id": "S03",
+      "publisher": "PCAOB",
+      "title": "AS 2410: Related Parties",
+      "url": "https://pcaobus.org/oversight/standards/auditing-standards/details/AS2410",
+      "publication_date_note": "Current standard page checked 2026-10-11",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The standard addresses identifying and assessing related-party relationships and transactions and responding to related risks.",
+      "limitations": "Motivates explicit entity relationships and evidence gaps; shared identifiers alone do not prove a related party."
+    },
+    {
+      "id": "S04",
+      "publisher": "ACFE",
+      "title": "Key Findings from Occupational Fraud 2026: A Report to the Nations",
+      "url": "https://cms.acfe.com/acfe-insights-blog/blog-detail?s=key-findings-report-to-the-nations-2026",
+      "publication_date_note": "2026-05",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The study covers 2,402 investigated occupational-fraud cases across 143 countries/territories. Financial statement fraud appears in 6% of cases and has a $1 million median loss within that category.",
+      "limitations": "Selected investigated cases are not a representative prevalence estimate, product TAM, or projected savings."
+    },
+    {
+      "id": "S05",
+      "publisher": "Gronewald et al. / Data in Brief",
+      "title": "Generating synthetic journal entries for audit analytics: Method and dataset",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13599566/",
+      "publication_date_note": "2026",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The paper describes a labeled synthetic general ledger covering two fiscal years of a fictional business, using double-entry postings and injected problematic entries; it links a Zenodo dataset.",
+      "limitations": "An external benchmark candidate only; no dataset was downloaded or redistributed. Original record and license must be verified before use."
+    },
+    {
+      "id": "S06",
+      "publisher": "DFKI",
+      "title": "Publication record: Generating Synthetic Journal Entries for Audit Analytics",
+      "url": "https://www.dfki.de/web/forschung/projekte-publikationen/publikation/17692",
+      "publication_date_note": "2026",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The authors institutional record identifies the work as Data in Brief volume 69 (2026) and describes synthetic patterns and probabilistic generation.",
+      "limitations": "Corroborates provenance; not independent validation of real-world generalization."
+    },
+    {
+      "id": "S07",
+      "publisher": "Gronewald et al.",
+      "title": "Anomaly Detection in General Ledger Data: Results from a Hybrid Approach",
+      "url": "https://arxiv.org/abs/2609.18228",
+      "publication_date_note": "2026-09-16 arXiv submission; page says presented at a 2024 conference",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The research-in-progress paper studies combining journal entry tests with machine learning on synthetic normal and anomalous entries.",
+      "limitations": "Direct related work; hybrid rules plus models is not a novelty claim for this project."
+    },
+    {
+      "id": "S08",
+      "publisher": "Schreyer et al.",
+      "title": "Detection of Anomalies in Large Scale Accounting Data using Deep Autoencoder Networks",
+      "url": "https://arxiv.org/abs/1709.05254",
+      "publication_date_note": "2017; revised 2018",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The paper proposes an autoencoder-based anomaly assessment for journal entries and reports experiments on two real accounting datasets.",
+      "limitations": "Alternative method for literature comparison; this handoff does not claim access to those datasets or reuse their performance."
+    },
+    {
+      "id": "S09",
+      "publisher": "Kapoor and Narayanan",
+      "title": "Leakage and the Reproducibility Crisis in ML-based Science",
+      "url": "https://arxiv.org/abs/2207.07048",
+      "publication_date_note": "2022; version history on source",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The paper documents data leakage as a source of unreproducible machine-learning scientific findings.",
+      "limitations": "Motivates auditable split and feature-availability tests; the specific split protocol here is a project design."
+    },
+    {
+      "id": "S10",
+      "publisher": "scikit-learn",
+      "title": "Common pitfalls and recommended practices",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html",
+      "publication_date_note": "Current documentation checked 2026-10-11",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The documentation describes data leakage and recommends fitting preprocessing only on training subsets, with pipelines helping enforce boundaries.",
+      "limitations": "Pin application library versions when implementing; current documentation is not a tested dependency lockfile."
+    },
+    {
+      "id": "S11",
+      "publisher": "scikit-learn",
+      "title": "IsolationForest",
+      "url": "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html",
+      "publication_date_note": "Current documentation checked 2026-10-11",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The estimator offers unsupervised anomaly scoring; its score direction and offset need to be interpreted consistently.",
+      "limitations": "Candidate algorithm, not a calibrated fraud probability. Freeze score orientation and preprocessing in tests."
+    },
+    {
+      "id": "S12",
+      "publisher": "scikit-learn",
+      "title": "Metrics and scoring",
+      "url": "https://scikit-learn.org/stable/modules/model_evaluation.html",
+      "publication_date_note": "Current documentation checked 2026-10-11",
+      "checked_on": "2026-10-11",
+      "verification": "Primary source opened or institutional primary record checked",
+      "supported_claim": "The documentation defines ranking/classification measures including precision-recall and average precision.",
+      "limitations": "Use exact named metric definitions; review-budget recall, coverage and case deduplication require project-specific definitions."
+    }
+  ],
+  "dataset_candidate": {
+    "doi": "https://doi.org/10.5281/zenodo.22014653",
+    "provenance": "Linked by S05; direct record could not be opened by the research tool.",
+    "status": "not_downloaded_not_license_verified",
+    "release_rule": "Do not fetch into a public repository or redistribute until direct metadata, files, hashes and license are checked."
+  }
+}

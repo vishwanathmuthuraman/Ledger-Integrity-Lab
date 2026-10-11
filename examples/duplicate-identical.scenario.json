@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S13",
+  "synthetic": true,
+  "organization_id": "ORG-A",
+  "engagement_id": "ENG-001",
+  "observed_as_of": "2026-04-10T12:00:00Z",
+  "scope": {
+    "authorized_entities": [
+      "ENTITY-A",
+      "ENTITY-B"
+    ],
+    "coverage_entities": [
+      "ENTITY-A",
+      "ENTITY-B"
+    ],
+    "coverage_through": "2026-04-10T12:00:00Z",
+    "evidence_feed_complete": true,
+    "expected_counterparts": []
+  },
+  "accounts": [
+    {
+      "account_id": "1000",
+      "classification": "asset",
+      "mapping_version": "COA-1",
+      "entity_ids": [
+        "ENTITY-A",
+        "ENTITY-B"
+      ],
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "account_id": "1300",
+      "classification": "asset",
+      "mapping_version": "COA-1",
+      "entity_ids": [
+        "ENTITY-A",
+        "ENTITY-B"
+      ],
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "account_id": "2000",
+      "classification": "liability",
+      "mapping_version": "COA-1",
+      "entity_ids": [
+        "ENTITY-A",
+        "ENTITY-B"
+      ],
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "account_id": "2300",
+      "classification": "liability",
+      "mapping_version": "COA-1",
+      "entity_ids": [
+        "ENTITY-A",
+        "ENTITY-B"
+      ],
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "account_id": "4000",
+      "classification": "revenue",
+      "mapping_version": "COA-1",
+      "entity_ids": [
+        "ENTITY-A",
+        "ENTITY-B"
+      ],
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "account_id": "6000",
+      "classification": "expense",
+      "mapping_version": "COA-1",
+      "entity_ids": [
+        "ENTITY-A",
+        "ENTITY-B"
+      ],
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    }
+  ],
+  "periods": [
+    {
+      "period_id": "PERIOD-03",
+      "entity_id": "ENTITY-A",
+      "starts_on": "2026-03-01",
+      "ends_on": "2026-03-31",
+      "closed_at": "2026-04-05T18:00:00Z",
+      "close_available_at": "2026-04-05T18:01:00Z",
+      "calendar_version": "CAL-1",
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "period_id": "PERIOD-03",
+      "entity_id": "ENTITY-B",
+      "starts_on": "2026-03-01",
+      "ends_on": "2026-03-31",
+      "closed_at": "2026-04-05T18:00:00Z",
+      "close_available_at": "2026-04-05T18:01:00Z",
+      "calendar_version": "CAL-1",
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "period_id": "PERIOD-04",
+      "entity_id": "ENTITY-A",
+      "starts_on": "2026-04-01",
+      "ends_on": "2026-04-30",
+      "closed_at": null,
+      "close_available_at": null,
+      "calendar_version": "CAL-1",
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    },
+    {
+      "period_id": "PERIOD-04",
+      "entity_id": "ENTITY-B",
+      "starts_on": "2026-04-01",
+      "ends_on": "2026-04-30",
+      "closed_at": null,
+      "close_available_at": null,
+      "calendar_version": "CAL-1",
+      "recorded_at": "2026-02-01T00:00:00Z",
+      "available_at": "2026-02-01T00:00:00Z"
+    }
+  ],
+  "entries": [
+    {
+      "entry_id": "JE-001",
+      "organization_id": "ORG-A",
+      "entity_id": "ENTITY-A",
+      "source_event_id": "JE-001",
+      "effective_date": "2026-03-15",
+      "recorded_at": "2026-03-15T10:00:00Z",
+      "available_at": "2026-03-15T10:05:00Z",
+      "period_id": "PERIOD-03",
+      "currency": "USD",
+      "currency_exponent": 2,
+      "entry_kind": "journal",
+      "manual": false,
+      "preparer_id": "ACTOR-01",
+      "business_purpose_ref": null,
+      "reversal_of": null,
+      "counterparty_entity_id": null,
+      "evidence_ids": [
+        "DOC-001"
+      ],
+      "lines": [
+        {
+          "line_id": "JE-001-1",
+          "account_id": "6000",
+          "currency": "USD",
+          "debit_minor": 250000,
+          "credit_minor": 0
+        },
+        {
+          "line_id": "JE-001-2",
+          "account_id": "1000",
+          "currency": "USD",
+          "debit_minor": 0,
+          "credit_minor": 250000
+        }
+      ]
+    },
+    {
+      "entry_id": "JE-001",
+      "organization_id": "ORG-A",
+      "entity_id": "ENTITY-A",
+      "source_event_id": "JE-001",
+      "effective_date": "2026-03-15",
+      "recorded_at": "2026-03-15T10:00:00Z",
+      "available_at": "2026-03-15T10:05:00Z",
+      "period_id": "PERIOD-03",
+      "currency": "USD",
+      "currency_exponent": 2,
+      "entry_kind": "journal",
+      "manual": false,
+      "preparer_id": "ACTOR-01",
+      "business_purpose_ref": null,
+      "reversal_of": null,
+      "counterparty_entity_id": null,
+      "evidence_ids": [
+        "DOC-001"
+      ],
+      "lines": [
+        {
+          "line_id": "JE-001-1",
+          "account_id": "6000",
+          "currency": "USD",
+          "debit_minor": 250000,
+          "credit_minor": 0
+        },
+        {
+          "line_id": "JE-001-2",
+          "account_id": "1000",
+          "currency": "USD",
+          "debit_minor": 0,
+          "credit_minor": 250000
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "DOC-001",
+      "organization_id": "ORG-A",
+      "entity_id": "ENTITY-A",
+      "kind": "support",
+      "available_at": "2026-03-15T10:01:00Z",
+      "recorded_at": "2026-03-15T10:00:00Z",
+      "entry_ids": [
+        "JE-001"
+      ],
+      "text": "Original synthetic documentation for the stated business purpose."
+    }
+  ],
+  "policy": {
+    "policy_version": "SYNTHETIC-DEV-1",
+    "period_end_days": 3,
+    "group_window_days": 7,
+    "group_min_entries": 3,
+    "group_review_threshold_minor": 1000000,
+    "required_support_for_manual_revenue": true,
+    "recorded_at": "2026-02-01T00:00:00Z",
+    "available_at": "2026-02-01T00:00:00Z"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S04",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "accepted",
+  "expected_label": "review_relevant",
+  "required_reason_codes": [
+    "period_end_support_gap"
+  ],
+  "forbidden_reason_codes": [
+    "unexplained_reversal"
+  ],
+  "visible_entry_ids_after_dedup": [
+    "JE-001"
+  ],
+  "withheld_entry_ids": [
+    "JE-002"
+  ],
+  "expected_gross_debits_minor_by_currency": {
+    "USD": 250000
+  },
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "JE-002 exists in replay source but is future information; it must not affect this cutoff."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "LI-S06",
+  "specification_only": true,
+  "runtime_implemented": false,
+  "expected_admission": "accepted",
+  "expected_label": "routine",
+  "required_reason_codes": [],
+  "forbidden_reason_codes": [
+    "late_post_permission_gap"
+  ],
+  "visible_entry_ids_after_dedup": [
+    "JE-001"
+  ],
+  "withheld_entry_ids": [],
+  "expected_gross_debits_minor_by_currency": {
+    "USD": 250000
+  },
+  "must_not_claim": [
+    "fraud proved",
+    "intent established",
+    "audit passed",
+    "money saved"
+  ],
+  "human_review_note": "Explicit synthetic permission covers this entry and period; suppress the permission-gap reason."
+}

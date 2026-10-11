@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "status": "original_development_specifications_not_benchmark",
+  "scenarios": [
+    {
+      "id": "LI-S01",
+      "name": "normal-recurring",
+      "scenario": "normal-recurring.scenario.json",
+      "expected": "normal-recurring.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S02",
+      "name": "documented-accrual-reversal",
+      "scenario": "documented-accrual-reversal.scenario.json",
+      "expected": "documented-accrual-reversal.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S03",
+      "name": "unsupported-period-end",
+      "scenario": "unsupported-period-end.scenario.json",
+      "expected": "unsupported-period-end.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S04",
+      "name": "reversal-before-known",
+      "scenario": "reversal-before-known.scenario.json",
+      "expected": "reversal-before-known.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S05",
+      "name": "reversal-after-known",
+      "scenario": "reversal-after-known.scenario.json",
+      "expected": "reversal-after-known.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S06",
+      "name": "authorized-late-post",
+      "scenario": "authorized-late-post.scenario.json",
+      "expected": "authorized-late-post.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S07",
+      "name": "unapproved-late-post",
+      "scenario": "unapproved-late-post.scenario.json",
+      "expected": "unapproved-late-post.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S08",
+      "name": "related-counterpart-complete-scope",
+      "scenario": "related-counterpart-complete-scope.scenario.json",
+      "expected": "related-counterpart-complete-scope.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S09",
+      "name": "related-counterpart-incomplete-scope",
+      "scenario": "related-counterpart-incomplete-scope.scenario.json",
+      "expected": "related-counterpart-incomplete-scope.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S10",
+      "name": "linked-adjustment-group",
+      "scenario": "linked-adjustment-group.scenario.json",
+      "expected": "linked-adjustment-group.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S11",
+      "name": "mixed-currency-rejected",
+      "scenario": "mixed-currency-rejected.scenario.json",
+      "expected": "mixed-currency-rejected.expected.json",
+      "expected_admission": "quarantined"
+    },
+    {
+      "id": "LI-S12",
+      "name": "unbalanced-quarantined",
+      "scenario": "unbalanced-quarantined.scenario.json",
+      "expected": "unbalanced-quarantined.expected.json",
+      "expected_admission": "quarantined"
+    },
+    {
+      "id": "LI-S13",
+      "name": "duplicate-identical",
+      "scenario": "duplicate-identical.scenario.json",
+      "expected": "duplicate-identical.expected.json",
+      "expected_admission": "accepted"
+    },
+    {
+      "id": "LI-S14",
+      "name": "duplicate-conflict",
+      "scenario": "duplicate-conflict.scenario.json",
+      "expected": "duplicate-conflict.expected.json",
+      "expected_admission": "quarantined"
+    },
+    {
+      "id": "LI-S15",
+      "name": "cross-organization-reference",
+      "scenario": "cross-organization-reference.scenario.json",
+      "expected": "cross-organization-reference.expected.json",
+      "expected_admission": "rejected"
+    },
+    {
+      "id": "LI-S16",
+      "name": "future-evidence-and-injection",
+      "scenario": "future-evidence-and-injection.scenario.json",
+      "expected": "future-evidence-and-injection.expected.json",
+      "expected_admission": "accepted"
+    }
+  ]
+}

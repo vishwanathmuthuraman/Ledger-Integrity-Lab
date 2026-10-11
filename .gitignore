@@ -1,0 +1,32 @@
+# Environments and local artifacts
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+.DS_Store
+# Private inputs, trained assets, evaluation secrets and outputs
+private/
+data/raw/
+data/customer/
+data/heldout/
+models/
+runs/
+output/
+dist/
+*.pem
+*.key
+*.p12
+*.sqlite*
+*.db
+# Local editor state
+.idea/
+.vscode/
+
+# Full internal handoffs remain outside the public package.
+BLUEPRINT.html
+planning/tasks.csv
+planning/estimate-summary.json
