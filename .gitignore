@@ -30,3 +30,17 @@ dist/
 BLUEPRINT.html
 planning/tasks.csv
 planning/estimate-summary.json
+
+# Python implementation artifacts.
+*.egg-info/
+build/
+outputs/
+.wheel-check/
+.wheel-requirements.txt
+
+# Reviewed synthetic implementation evidence only.
+reports/*
+!reports/initial-implementation/
+reports/initial-implementation/*
+!reports/initial-implementation/verification.json
+!reports/initial-implementation/demo-*.json

@@ -1,6 +1,6 @@
 # Project working instructions
 
-Read README.md, START-HERE.md and docs/01-product-requirements.md through docs/05-definition-of-done.md before implementing. Application behavior and benchmark results do not exist yet.
+Read README.md, START-HERE.md and docs/01-product-requirements.md through docs/05-definition-of-done.md before implementing. Initial admission/control behavior exists; read docs/IMPLEMENTATION.md. Review ranking and benchmark results remain pending.
 
 The persistent cross-session policy is [ENGINEERING.md](ENGINEERING.md). Read it before changing implementation languages, identity configuration or publication boundaries.
 

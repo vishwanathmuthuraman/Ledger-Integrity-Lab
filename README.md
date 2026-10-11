@@ -1,18 +1,33 @@
 # Ledger Integrity Lab
 
 [![Documentation integrity](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml)
+[![Implementation checks](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/implementation.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/implementation.yml)
 
 ### From accounting entries to evidence a reviewer can inspect.
 
 ![Ledger Integrity Lab: import, validate, prioritize, review](assets/overview.svg)
 
-**Status: public research specification and synthetic examples. The detector is not implemented. No detection accuracy, customer outcomes or independent certification are claimed.**
+**Stage: initial offline implementation.** Runnable Python components, synthetic demos and behavioral tests are available. The complete workflow, predictive/model evaluation and production product remain pending. The initial code performs journal admission and accounting controls; the contextual detector remains unimplemented.
 
 A proposed research system that identifies unusual journal entries and linked accounting patterns, then shows a finance reviewer **what changed, which records support the concern, and what evidence is missing**. An unusual entry is a reason to review; it is not proof of fraud.
 
 | Research focus | Engineering approach | First deliverable |
 |---|---|---|
 | Management override indicators, period-end adjustments, reversal patterns and related-entity gaps | Python + SQL; exact money; reproducible time-aware evaluation | A local review queue compared with transparent baselines |
+
+## Run the initial implementation
+
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then run these commands from this repository. The runtime is pinned to Python 3.12.13; dependencies are pinned in `uv.lock`.
+
+```sh
+uv sync --locked
+uv run --locked ledger-lab inspect examples/normal-recurring.scenario.json
+uv run --locked pytest
+```
+
+The CLI prints JSON. `validate` checks the same input contract; invalid or unsupported input returns exit code 2 with a JSON error on stderr. Successful inspection returns exit code 0.
+
+**Verified locally:** 31 behavioral/CLI tests, Ruff checks, and an installed wheel executed outside the checkout. See [completed tasks and next steps](docs/IMPLEMENTATION.md), [the actual verification record](reports/initial-implementation/verification.json) and [captured demo output](reports/initial-implementation/demo-1.json). This evidence covers the initial offline components; the full study remains pending.
 
 ## The question
 
@@ -62,13 +77,12 @@ Read the standing [engineering policy](ENGINEERING.md) before implementation. St
 ## Run the documentation checks
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-blueprint.txt
-.venv/bin/python scripts/validate_blueprint.py
-.venv/bin/python scripts/check_public_docs.py
+uv sync --locked
+uv run --locked python scripts/validate_blueprint.py
+uv run --locked python scripts/check_public_docs.py
 ```
 
-Application implementation is planned in the [public milestones](docs/03-build-plan.md). The documentation check record is [blueprint-validation.json](docs/blueprint-validation.json).
+The remaining workflow and evaluation are planned in the [public milestones](docs/03-build-plan.md). The documentation check record is [blueprint-validation.json](docs/blueprint-validation.json).
 
 ## Release boundary
 
@@ -78,6 +92,6 @@ No automatic changes to books, accusations, payment blocks, personnel decisions,
 
 ## Public package
 
-This edition includes original synthetic examples, contracts, evaluation methods, source rationale and public milestones. Internal task schedules and effort estimates are maintained outside the repository. Implementation and measured algorithm results remain pending. License selection is pending; no code, documentation or data license grant is supplied.
+This edition includes original synthetic examples, contracts, evaluation methods, source rationale and public milestones. Internal task schedules and effort estimates are maintained outside the repository. Initial component source and verification are included; measured algorithm results remain pending. License selection is pending; no code, documentation or data license grant is supplied.
 
 Maintained by [Vishwanath Muthuraman](https://github.com/vishwanathmuthuraman). [Contribution guidance](CONTRIBUTING.md) explains how to propose a synthetic case or challenge a design assumption.

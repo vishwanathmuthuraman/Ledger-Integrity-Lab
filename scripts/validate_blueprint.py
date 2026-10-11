@@ -126,7 +126,7 @@ def main():
         'schema_count': len(schemas), 'fixture_pairs': len(index), 'fixture_admissions': admissions,
         'primary_sources': len(sources), 'local_markdown_links_checked': links,
         'requirement_acceptance_test_coverage': 'complete',
-        'application_implemented': False, 'application_tests_run': False, 'benchmark_run': False,
+        'full_application_implemented': False, 'implementation_evidence': 'reports/initial-implementation/verification.json', 'application_tests_run': False, 'benchmark_run': False,
         'fixture_manifest_sha256': hashlib.sha256((ROOT / 'examples/index.json').read_bytes()).hexdigest()
     }
     (ROOT / 'docs/blueprint-validation.json').write_text(json.dumps(result, indent=2) + '\n')

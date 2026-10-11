@@ -1,6 +1,6 @@
 {
   "check_type": "documentation_contract_and_fixture_integrity_only",
-  "checked_at": "2026-10-11T12:16:16.644688+00:00",
+  "checked_at": "2026-10-11T13:36:33.192232+00:00",
   "passed": true,
   "edition": "curated_public_specification",
   "internal_delivery_plan_included": false,
@@ -14,9 +14,10 @@
     "rejected": 1
   },
   "primary_sources": 12,
-  "local_markdown_links_checked": 44,
+  "local_markdown_links_checked": 63,
   "requirement_acceptance_test_coverage": "complete",
-  "application_implemented": false,
+  "full_application_implemented": false,
+  "implementation_evidence": "reports/initial-implementation/verification.json",
   "application_tests_run": false,
   "benchmark_run": false,
   "fixture_manifest_sha256": "fedd7c0ecec4550ffd945349040124c4e66ec264eabacb201a3b9ea31c316165"

@@ -1,6 +1,6 @@
 # 03 — Research milestones
 
-**Status: proposed research system. The detector, application tests and benchmark are not implemented.** The runnable tooling in this repository checks documentation, contracts and synthetic fixture integrity only.
+Initial offline components are implemented and verified. See [component progress and actual evidence](IMPLEMENTATION.md). Contracts, data quality and as-of evidence have partial implementation evidence. Contextual reason packets, review ranking, labeled experiments and a full research release remain pending. The milestones below retain their complete acceptance boundaries.
 
 The public milestones describe observable outcomes. Detailed delivery schedules, implementation assignments and effort estimates are maintained separately.
 

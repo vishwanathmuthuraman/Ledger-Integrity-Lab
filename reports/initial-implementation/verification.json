@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "scope": "initial_offline_components_only",
+  "verified_at": "2026-10-11T13:32:24.737217+00:00",
+  "python": "3.12.13",
+  "platform": "Darwin",
+  "package_version": "0.1.0",
+  "clean_wheel_install": true,
+  "wheel_run_outside_checkout": true,
+  "schemas_loaded_from_installed_wheel": true,
+  "behavioral_tests": {
+    "command": "python -m pytest -q tests",
+    "passed": 31,
+    "failed": 0
+  },
+  "ruff": {
+    "lint": "passed",
+    "format": "passed"
+  },
+  "uv_lock_sha256": "09dbb1096d461128b7e0636a921654075de5ebffdf9e22f8948a3bcef795617e",
+  "implementation_files_sha256": {
+    "src/ledger_integrity_lab/__init__.py": "567facf79bbbd56a4b5bc1f80b4df6967d1e573100fdc680ab6591a658e3e77f",
+    "src/ledger_integrity_lab/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/ledger_integrity_lab/cli.py": "f17a39385a8658c22598fe5b532dc5e776515f61cf15fbb6d5cf0b0201ff6ef5",
+    "src/ledger_integrity_lab/common.py": "38c64e19f828112a4e547fd08da3f3d1a9d1ccd21cfe01f797d6bf884c300287",
+    "src/ledger_integrity_lab/core.py": "1d469789672c8fba2e4d6f9a18aef0b5fc7dbc0da1abbfca355bf53db1217602",
+    "tests/test_cli.py": "b999d6672edbfccd659bb0ccbaab0a36b39040fa1a9eb13b1f27ea151e7bd0c9",
+    "tests/test_core.py": "db8ed47a1ee74ce72ab5f8d3b8213fc8a196828b6eb5153e068ec8d450a6a5b3",
+    "schemas/expected-result.schema.json": "bc5b9780b4d9e4326b1bf1e1eb80f048d9c811ff47426da718f9f0525863b18a",
+    "schemas/label-record.schema.json": "66272999609bd8a96aefe9c171855ded53661ad09a612f9995b6750eadba6562",
+    "schemas/review-report.schema.json": "6c35d1844d637be3893c1ac49c5e0cf052e57d6336c03085ab21b3d2fd64b342",
+    "schemas/scenario.schema.json": "d1227cbbb94db078e9235a5bd35b6ce21a0e870f383223158d59a2b7a281ca58",
+    "pyproject.toml": "b3d8aaa4632ae4ad7bdc3543f9bf2cc6a9d79bc07ca70d96e9d86158cd8a0377",
+    "uv.lock": "09dbb1096d461128b7e0636a921654075de5ebffdf9e22f8948a3bcef795617e",
+    ".python-version": "aa0d6581054e6e4ff3f91839deca7a854ad37221b8784d060b42d0f847ff1a3b"
+  },
+  "demos": [
+    {
+      "input": "examples/normal-recurring.scenario.json",
+      "input_sha256": "9778f0c8131f93db0fc435812b15432d6208c7a911837178eb3c0c0734394009",
+      "command": "ledger-lab inspect examples/normal-recurring.scenario.json",
+      "exit_code": 0,
+      "output": "demo-1.json",
+      "output_sha256": "3f1f4e1e7c837616a3d0002ee614119f7d07063a7f29c297718dae2a0305ee2b"
+    }
+  ],
+  "held_out_benchmark_executed": false,
+  "production_validated": false,
+  "limits": [
+    "Development fixtures and boundary tests only.",
+    "No predictive model or customer outcome is evaluated.",
+    "No live provider action is taken."
+  ]
+}
