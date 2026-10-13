@@ -12,7 +12,7 @@
 | Reproducible model configuration when claiming reproducible results | Proprietary trained artifacts or licensed data whose rights restrict publication |
 | Honest authorship/contribution history and cited related work | Credentials, private affiliations, restricted security configuration and personal records |
 
-Public code and designs can be read and copied. A license defines permitted reuse; it does not make publication confidential. Choosing Go, Rust or any other language does not prevent copying. Select a license deliberately before a reusable release; no license grant is added by this blueprint.
+Public code and designs can be read and copied. A license defines permitted reuse; it does not make publication confidential. Choosing Go, Rust or any other language does not prevent copying. Original code, documentation and synthetic fixtures are licensed under Apache-2.0; see LICENSE and NOTICE. Third-party material retains its own terms.
 
 Public credibility needs enough evidence for someone to inspect and reproduce the claimed work. Protect genuine secrets by keeping them out of the public edition, not by hiding the methods needed to assess a performance claim. If a private model cannot be distributed, label the public artifact a limited demonstration and state exactly what cannot be reproduced.
 

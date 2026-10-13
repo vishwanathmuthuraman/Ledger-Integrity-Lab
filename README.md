@@ -86,12 +86,16 @@ The remaining workflow and evaluation are planned in the [public milestones](doc
 
 ## Release boundary
 
-This is the curated public research specification. Detailed delivery schedules and full internal handoffs are maintained separately. A future implemented release should publish enough software and experimental evidence to be independently assessed, using synthetic or properly licensed data. Customer exports, private production controls, live identifiers, raw interview notes and commercial strategy stay outside that edition. Public material can be copied; language choice does not prevent copying. License selection is pending.
+This is the curated public research specification. Detailed delivery schedules and full internal handoffs are maintained separately. A future implemented release should publish enough software and experimental evidence to be independently assessed, using synthetic or properly licensed data. Customer exports, private production controls, live identifiers, raw interview notes and commercial strategy stay outside that edition. Public material can be copied; language choice does not prevent copying. Original code, documentation and synthetic fixtures are licensed under Apache-2.0; see LICENSE and NOTICE. Third-party material retains its own terms.
 
 No automatic changes to books, accusations, payment blocks, personnel decisions, investment recommendations or audit opinions are in scope.
 
 ## Public package
 
-This edition includes original synthetic examples, contracts, evaluation methods, source rationale and public milestones. Internal task schedules and effort estimates are maintained outside the repository. Initial component source and verification are included; measured algorithm results remain pending. License selection is pending; no code, documentation or data license grant is supplied.
+This edition includes original synthetic examples, contracts, evaluation methods, source rationale and public milestones. Internal task schedules and effort estimates are maintained outside the repository. Initial component source and verification are included; measured algorithm results remain pending. Original code, documentation and synthetic fixtures are licensed under Apache-2.0; see LICENSE and NOTICE. Third-party material retains its own terms.
 
 Maintained by [Vishwanath Muthuraman](https://github.com/vishwanathmuthuraman). [Contribution guidance](CONTRIBUTING.md) explains how to propose a synthetic case or challenge a design assumption.
+
+## License
+
+Original repository material is licensed under [Apache-2.0](LICENSE). See [licensing and attribution](docs/09-licensing.md) for scope, third-party material and distribution requirements.
