@@ -2,7 +2,7 @@
 
 ## Product and user
 
-Ledger Integrity Lab is a proposed read-only accounting analytics system for a controller, internal audit analyst or independent accounting reviewer. Its job is to **prioritize records and evidence for a human to investigate**, including concerns that survive ordinary debit/credit and invoice/payment reconciliation. It does not replace an audit, establish wrongdoing or determine an employee's character.
+EntrySift is a proposed read-only accounting analytics system for a controller, internal audit analyst or independent accounting reviewer. Its job is to **prioritize records and evidence for a human to investigate**, including concerns that survive ordinary debit/credit and invoice/payment reconciliation. It does not replace an audit, establish wrongdoing or determine an employee's character.
 
 The initial deliverable is a local reproducible research application. The future customer hypothesis is an internal review team or accounting firm whose existing journal-entry tests produce more items than it can investigate. Access to an authorized ledger export and a qualified reviewer is a prerequisite for a useful pilot; neither is claimed today.
 

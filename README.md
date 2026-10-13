@@ -1,11 +1,11 @@
-# Ledger Integrity Lab
+# EntrySift — Accounting anomaly research
 
 [![Documentation integrity](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml)
 [![Implementation checks](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/implementation.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/implementation.yml)
 
 ### From accounting entries to evidence a reviewer can inspect.
 
-![Ledger Integrity Lab: import, validate, prioritize, review](assets/overview.svg)
+![EntrySift: import, validate, prioritize, review](assets/overview.svg)
 
 **Stage: initial offline implementation.** Runnable Python components, synthetic demos and behavioral tests are available. The complete workflow, predictive/model evaluation and production product remain pending. The initial code performs journal admission and accounting controls; the contextual detector remains unimplemented.
 
@@ -14,6 +14,8 @@ A proposed research system that identifies unusual journal entries and linked ac
 | Research focus | Engineering approach | First deliverable |
 |---|---|---|
 | Management override indicators, period-end adjustments, reversal patterns and related-entity gaps | Python + SQL; exact money; reproducible time-aware evaluation | A local review queue compared with transparent baselines |
+
+This is the public research project previously called **Ledger Integrity Lab**. The repository URL, Python package and CLI commands remain unchanged.
 
 ## Run the initial implementation
 
@@ -72,7 +74,7 @@ Read the standing [engineering policy](ENGINEERING.md) before implementation. St
 
 ## How this differs from the finance reconciliation project
 
-**Finance Exception Investigator** examines whether invoices, orders, payments and recorded amounts agree. **Ledger Integrity Lab** examines potentially concerning accounting behavior even when those records reconcile: unusual combinations of accounts, unsupported adjustments, timing, reversals, control exceptions and incomplete related-entity context. The projects can share permitted import contracts later; their questions and evaluations remain separate.
+**[ReconcileTrail](https://github.com/vishwanathmuthuraman/finance-exception-investigator)** examines whether invoices, orders, payments and recorded amounts agree. **EntrySift** examines potentially concerning accounting behavior even when those records reconcile: unusual combinations of accounts, unsupported adjustments, timing, reversals, control exceptions and incomplete related-entity context. The projects can share permitted import contracts later; their questions and evaluations remain separate.
 
 ## Run the documentation checks
 
