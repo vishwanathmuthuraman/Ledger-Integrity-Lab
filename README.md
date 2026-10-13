@@ -1,11 +1,19 @@
+<p align="center"><img src="docs/assets/brand/logo.svg" width="88" height="88" alt="EntrySift logo"></p>
+
 # EntrySift — Accounting anomaly research
 
-[![Documentation integrity](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml)
+<p align="center"><img src="docs/assets/brand/banner.svg" width="100%" alt="EntrySift: Bring accounting context into the review. Journal admission, Balance controls, Evidence visibility. Offline research components."></p>
+
 [![Implementation checks](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/implementation.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/implementation.yml)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square)](pyproject.toml)
+[![Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-68b89b?style=flat-square)](LICENSE)
+[![Documentation integrity](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml/badge.svg?branch=main)](https://github.com/vishwanathmuthuraman/Ledger-Integrity-Lab/actions/workflows/docs.yml)
+
+[Quick start](#run-the-initial-implementation) · [Implemented scope](docs/IMPLEMENTATION.md) · [Architecture](docs/02-architecture.md) · [Evaluation](docs/04-evaluation.md) · [Contribute](CONTRIBUTING.md)
+
+---
 
 ### From accounting entries to evidence a reviewer can inspect.
-
-![EntrySift: import, validate, prioritize, review](assets/overview.svg)
 
 **Stage: initial offline implementation.** Runnable Python components, synthetic demos and behavioral tests are available. The complete workflow, predictive/model evaluation and production product remain pending. The initial code performs journal admission and accounting controls; the contextual detector remains unimplemented.
 

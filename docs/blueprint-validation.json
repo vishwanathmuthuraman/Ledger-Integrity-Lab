@@ -1,6 +1,6 @@
 {
   "check_type": "documentation_contract_and_fixture_integrity_only",
-  "checked_at": "2026-10-13T10:02:22.313823+00:00",
+  "checked_at": "2026-10-13T10:35:41.387888+00:00",
   "passed": true,
   "edition": "curated_public_specification",
   "internal_delivery_plan_included": false,
@@ -14,7 +14,7 @@
     "rejected": 1
   },
   "primary_sources": 12,
-  "local_markdown_links_checked": 68,
+  "local_markdown_links_checked": 74,
   "requirement_acceptance_test_coverage": "complete",
   "full_application_implemented": false,
   "implementation_evidence": "reports/initial-implementation/verification.json",
