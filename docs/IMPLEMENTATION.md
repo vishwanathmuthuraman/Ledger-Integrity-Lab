@@ -28,6 +28,17 @@ Observed demo: The normal recurring case admits one balanced entry with 250,000 
 
 [Captured output](../reports/initial-implementation/demo-1.json). Test use of authored expected files is restricted to development assertions; application code does not open them. These are component regressions, not independent held-out evaluation or performance measurements.
 
+## Snapshot identity and reimport boundary (first part of next step 1)
+
+Added [snapshot.py](../src/ledger_integrity_lab/snapshot.py) with `snapshot_manifest` and `reconcile_reimport`, tested in [test_snapshot.py](../tests/test_snapshot.py). It is a library-only, in-memory boundary; nothing is persisted and the CLI is unchanged.
+
+- A manifest holds a SHA-256 `snapshot_id` over canonical content, scope and policy digests, and per-record key/digest/availability for mappings, calendars, evidence and entries. It is independent of record order and is not produced for invalid input.
+- A reimport against a prior manifest is `identical_replay` (same content) or `new_snapshot` (later or equal cutoff, same organization/engagement and scope, additions or new mapping/calendar versions only). It is rejected on organization/engagement mismatch, scope change, a cutoff moving backwards, changed content under an existing mapping/calendar version, or a record visible at the prior cutoff that was changed or removed.
+
+Commands run: `uv run --locked ruff format src tests`, `uv run --locked ruff check src tests`, `uv run --locked pytest -q`. Observed: lint and format clean; 45 passed (31 existing + 14 new). Documentation checks are listed in the pull request.
+
+Remaining limits: no durable storage, no CLI access, no handling of records that first become available after the prior cutoff being backdated, and no mapping-version resolution policy. Detection quality and production readiness are not established.
+
 ## Relationship to the full plan
 
 Contracts, data quality and as-of evidence have partial implementation evidence. Contextual reason packets, review ranking, labeled experiments and a full research release remain pending.
